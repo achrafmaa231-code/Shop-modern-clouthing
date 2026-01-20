@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>تغيير الشاشة</title>
+  <link rel="stylesheet" href="testIndex.html">
+
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+    }
+
+    .screen {
+      display: none;
+    }
+
+    .screen.active {
+      display: block;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- الشاشة الأولى -->
+  <div id="screen1" class="screen active">
+    <h1>الشاشة الأولى</h1>
+    <button id="btnNext">اذهب للشاشة الثانية</button>
+  </div>
+
+  <!-- الشاشة الثانية -->
+  <div id="screen2" class="screen">
+    <h1>الشاشة الثانية</h1>
+    <button id="btnBack">رجوع</button>
+  </div>
+
+  <script>
+    const screen1 = document.getElementById("screen1");
+    const screen2 = document.getElementById("screen2");
+
+    document.getElementById("btnNext").addEventListener("click", () => {
+      screen1.classList.remove("active");
+      screen2.classList.add("active");
+    });
+
+    document.getElementById("btnBack").addEventListener("click", () => {
+      screen2.classList.remove("active");
+      screen1.classList.add("active");
+    });
+  </script>
+
+</body>
+</html>
