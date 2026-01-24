@@ -13,10 +13,52 @@
     align-items: center;
     justify-content: center;
 }
+@keyframes backrondcolorsize{
+    10%{
+        background-color: blue;
+        font-size: 25px;
+    }
+    20%{
+        background-color: rgb(0, 255, 213);
+        font-size: 27px;
+    }
+    30%{
+        background-color: rgb(255, 0, 238);
+        font-size: 28px;
+    }
+    40%{
+        background-color: rgb(247, 147, 147);
+        font-size: 29px;
+    }
+    50%{
+        background-color: rgb(255, 30, 0);
+        font-size: 30px;
+    }
+    60%{
+        background-color: rgb(99, 4, 94);
+        font-size: 31px;
+    }
+    70%{
+        background-color: rgb(0, 255, 64);
+        font-size: 32px;
+    }
+    80%{
+        background-color: rgb(39, 73, 39);
+        font-size: 33px;
+    }
+    90%{
+        background-color: rgb(255, 255, 0);
+        font-size: 34px;
+    }
+
+
+
+}
 button{
     background-color: blue;
     font-size: 35px;
-    cursor: pointer;    
+    cursor: pointer; 
+    animation: backrondcolorsize 3s infinite ease-out; 
 }
 button:hover{
     background-color:rgb(63, 63, 247);
